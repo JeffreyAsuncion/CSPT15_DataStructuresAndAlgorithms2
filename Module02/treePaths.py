@@ -48,19 +48,30 @@ The given tree looks like this:
 #     self.left = None
 #     self.right = None
 def treePaths(t):
+    # if the tree is empty
     if not t:
+        #return empty
         return []
     
     def Tree_paths(node, path, res):
+        # if node is None
         if not node:
+            # return result
             return res
+        # if left and right is None
         if not node.left and not node.right:
+            # append to result
             res.append(path)
+            # return result
             return res
         
+        # if there is still left node
         if node.left:
+            # call Tree_paths and print value at node
             Tree_paths(node.left, path+f"->{node.left.value}", res)
+        # if there is still a right node
         if node.right:
+            # call Tree_path and print value at node
             Tree_paths(node.right, path+f"->{node.right.value}", res)
             
         return res
