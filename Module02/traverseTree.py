@@ -50,32 +50,30 @@ This t looks like this:
    \   /
     3 5
 """
-null = None
+#
+# Binary trees are already defined with this interface:
+# class Tree(object):
+#   def __init__(self, x):
+#     self.value = x
+#     self.left = None
+#     self.right = None
+def traverseTree(t):
 
-t = {
-    "value": 1,
-    "left": 
-        {
-        "value": 2,
-        "left": null,
-        "right": 
-            {
-            "value": 3,
-            "left": null,
-            "right": null
-            }
-        },
-    "right": 
-        {
-        "value": 4,
-        "left": 
-            {
-            "value": 5,
-            "left": null,
-            "right": null
-            },
-        "right": null
-        }
-    }
+    if t is None:
+        return []
 
-print(t["value"]["left"])
+    result = [] # final holder
+    queue = [] # intermediate holder
+    queue.append(t)
+
+    while len(queue) != 0:
+        node = queue.pop(0)
+        result.append(node.value)
+
+        if node.left is not None:
+            queue.append(node.left)
+
+        if node.right is not None:
+            queue.append(node.right)
+
+    return result
