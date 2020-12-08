@@ -59,7 +59,7 @@ def treePaths(t):
         #return empty
         return []
     
-    def paths(node, path, res):
+    def Tpaths(node, path, res):
         # if node is None
         if not node:
             # return result
@@ -75,16 +75,16 @@ def treePaths(t):
         # if there is still left node
         if node.left:
             # call Tree_paths and print value at node
-            paths(node.left, path+f"->{node.left.value}", res)
+            Tpaths(node.left, path+f"->{node.left.value}", res)
 
         # if there is still a right node
         if node.right:
             # call Tree_path and print value at node
-            paths(node.right, path+f"->{node.right.value}", res)
+            Tpaths(node.right, path+f"->{node.right.value}", res)
             
         return res
     
-    return paths(t, f"{t.value}", [])
+    return Tpaths(t, f"{t.value}", [])
     
 
 
