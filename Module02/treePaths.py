@@ -1,4 +1,9 @@
 """
+youtube.com/watch?v=-k2qIVp1WuU
+"""
+
+
+"""
 Given a binary tree of integers, return all the paths from the tree's root to its leaves as an array of strings. The strings should have the following format:
 "root->node1->node2->...->noden", representing the path from root to noden, where root is the value stored in the root and node1,node2,...,noden are the values stored in the 1st, 2nd,..., and nth nodes in the path respectively (noden representing the leaf).
 
