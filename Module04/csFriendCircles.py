@@ -109,13 +109,7 @@ def csFriendCircles(friendships):
 
 
 
-
-
-
-
-
 # Example 1:
-
 # Input: 
 x1 = [[1,1,0],
       [1,1,0],
