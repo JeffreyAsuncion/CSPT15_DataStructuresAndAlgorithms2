@@ -82,7 +82,7 @@ def depthFirstcsFindAllPathsFromAToB(graph):
 
 
 graph = [[1, 2],[3],[3],[4],[]]
-print("*" * 40)
-print(BreadthFirstcsFindAllPathsFromAToB(graph))
+# print("*" * 40)
+# print(BreadthFirstcsFindAllPathsFromAToB(graph))
 print("*" * 40)
 print(depthFirstcsFindAllPathsFromAToB(graph))
