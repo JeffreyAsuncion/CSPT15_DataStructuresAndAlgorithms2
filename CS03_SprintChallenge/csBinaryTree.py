@@ -1,0 +1,49 @@
+"""
+Given a binary tree, write a function that inverts the tree.
+
+Example:
+
+Input:
+     6
+   /   \
+  4     8
+ / \   / \
+2   5 7   9
+
+Output:
+     6
+   /   \
+  8     4
+ / \   / \
+9   7 5   2
+"""
+
+"""
+https://www.youtube.com/watch?v=jtbDJur_kKw
+"""
+
+#
+# Binary trees are already defined with this interface:
+# class Tree(object):
+#   def __init__(self, x):
+#     self.value = x
+#     self.left = None
+#     self.right = None
+def csBinaryTreeInvert(root):
+
+    def dfs(node):
+        #base case 
+        if not node:
+            return
+            
+        #dfs on left
+        dfs(node.left)
+        #dfs on right
+        dfs(node.right)
+        
+        # python swap - switch nodes
+        node.left, node.right =  node.right, node.left
+    
+    dfs(root)
+    
+    return root
